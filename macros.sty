@@ -1,0 +1,206 @@
+\ProvidesPackage{macros}
+
+%%% PACKAGES %%%
+
+% Standard AMS Packages
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% Localization
+\usepackage[american]{babel}
+
+% Graphics
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{matrix,arrows,decorations.markings,shapes,snakes,automata,backgrounds,petri}
+
+% Fine Tuning
+\usepackage{microtype}
+
+% Extra Fonts
+\usepackage{bbm}
+\usepackage{bm}
+
+% Chemical Formulae
+\usepackage{chemformula}
+
+% LuaTeX
+% \usepackage{luatexbase}
+
+%%% FIXES %%%
+
+\renewcommand*{\mathbb}[1]{\mathbbm{#1}}
+
+%%% NOTATIONS %%%
+
+% Symbols
+\newcommand*{\sq}{\square}
+
+% Arrows
+\newcommand*{\onto}{\twoheadrightarrow}
+\newcommand*{\inc}{\hookrightarrow}
+\newcommand*{\into}{\rightarrowtail}
+\renewcommand*{\to}[1][]{\xrightarrow{#1}}
+\newcommand*{\ot}[1][]{\xleftarrow{#1}}
+\newcommand*{\oto}{\leftrightarrow}
+
+\newcommand*{\tto}{\Rightarrow}
+
+% Duals
+\newcommand*{\op}{^{\mathord{\text{\rm op}}}}
+
+% Exponential and Imaginary
+\newcommand*{\e}{\mathrm{e}}
+\renewcommand*{\i}{\mathrm{i}}
+
+% Vectors
+\newcommand*{\vect}[1]{\bm{#1}}
+
+% Calculus
+\renewcommand*{\d}[1]{\mathop{\frac{\mathrm{d}}{\mathrm{d} #1}}}
+\newcommand*{\pd}[1]{\mathop{\frac{\partial}{\partial #1}}}
+
+% Set Theory
+\newcommand*{\set}[1]{\{#1\}}
+
+% References
+\newcommand{\eref}[1]{(\ref{#1})}
+\newcommand{\sref}[1]{section~\ref{#1}}
+\newcommand{\fref}[1]{figure~\ref{#1}}
+\newcommand{\tref}[1]{table~\ref{#1}}
+\newcommand{\Eref}[1]{Equation (\ref{#1})}
+\newcommand{\Sref}[1]{Section~\ref{#1}}
+\newcommand{\Fref}[1]{Figure~\ref{#1}}
+\newcommand{\Tref}[1]{Table~\ref{#1}}
+\newcommand{\Xref}[1]{Example~\ref{#1}}
+
+% Bra-ket notation
+\newcommand*{\LLangle}{\langle\kern-2\nulldelimiterspace\langle}
+\newcommand*{\bigLangle}{\big\langle}
+\newcommand*{\bigLLangle}{\bigLangle\kern-2.5\nulldelimiterspace\bigLangle}
+\newcommand*{\BigLangle}{\Big\langle}
+\newcommand*{\BigLLangle}{\BigLangle\kern-3\nulldelimiterspace\BigLangle}
+
+\newcommand*{\RRangle}{\rangle\kern-2\nulldelimiterspace\rangle}
+\newcommand*{\bigRangle}{\big\rangle}
+\newcommand*{\bigRRangle}{\bigRangle\kern-2.5\nulldelimiterspace\bigRangle}
+\newcommand*{\BigRangle}{\Big\rangle}
+\newcommand*{\BigRRangle}{\BigRangle\kern-3\nulldelimiterspace\BigRangle}
+
+\newcommand*{\braA}[1]{{\langle #1 |}}
+\newcommand*{\ketA}[1]{{| #1 \rangle}}
+\newcommand*{\braketA}[2]{\langle #1 | #2 \rangle}
+
+\newcommand*{\braB}[1]{\LLangle #1 |}
+\newcommand*{\ketB}[1]{| #1 \RRangle}
+\newcommand*{\braketB}[2]{\LLangle #1 | #2 \RRangle}
+
+\newcommand*{\braketBA}[2]{\LLangle #1 | #2 \rangle}
+\newcommand*{\braketAB}[2]{\langle #1 | #2 \RRangle}
+
+% Relations
+
+\newcommand*{\ins}{\subseteq}
+
+%%% NOUNS %%%
+
+% Sets
+\newcommand*{\numberset}[1]{\mathbb{#1}}
+\newcommand*{\complex}{\numberset{C}}
+\newcommand*{\rational}{\numberset{Q}}
+\renewcommand*{\natural}{\numberset{N}}
+\newcommand*{\integer}{\numberset{Z}}
+\newcommand*{\ffield}{\numberset{F}}
+\newcommand*{\real}{\numberset{R}}
+
+% Categories
+\newcommand*{\category}[1]{\mathsf{#1}}
+\newcommand*{\setC}{\category{Set}}
+\newcommand*{\finSetC}{\category{FinSet}}
+\newcommand*{\sSetC}{\category{sSet}}
+\newcommand*{\grpC}{\category{Grp}}
+\newcommand*{\abC}{\category{Ab}}
+\newcommand*{\catC}{\category{Cat}}
+\newcommand*{\modC}[1]{\category{Mod}_{#1}}
+\newcommand*{\vecC}[1]{\category{Vec}_{#1}}
+\newcommand*{\linRelC}[1]{\category{LinRel}_{#1}}
+
+% Distributions
+\DeclareMathOperator{\normalDist}{N}
+\DeclareMathOperator{\gammaDist}{\Gamma}
+
+%%% OPERATORS %%%
+
+% Abelian Categories
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\coim}{coim}
+\DeclareMathOperator{\coker}{coker}
+
+% arg(min/max)
+\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator*{\argmax}{argmax}
+
+% Representation Theory
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\SU}{SU}
+\DeclareMathOperator{\SO}{SO}
+
+% Category Theory
+\DeclareMathOperator{\cospan}{\mathcal{C}sp}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Mor}{Mor}
+\DeclareMathOperator{\End}{End}
+
+% Undirected Categories
+\newcommand*{\bind}[3]{\mathbin{\begin{smallmatrix} #3 \\ #1 \equiv #2 \end{smallmatrix}}}
+
+% Probability
+\newcommand*{\Prob}{\mathop{\mathbb{P}}}
+\newcommand*{\E}{\mathop{\mathrm{E}}}
+
+% Exponential
+\renewcommand*{\exp}[1]{\e^{#1}}
+\DeclareMathOperator{\Exp}{exp}
+
+% Surrounding
+\newcommand*{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand*{\Abs}[1]{\left\lVert#1\right\rVert}
+\newcommand*{\abs}[1]{\left\lvert#1\right\rvert}
+\newcommand*{\avg}[1]{\left\langle#1\right\rangle}
+
+% Set operations
+\newcommand*{\by}{\mathbin{\times}}
+
+% Inverse
+\newcommand*{\inv}{^{-1}}
+
+%%% THEOREMS %%%
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem{example}{Example}
+\newtheorem{lexample}[example]{Example}
+
+%%% STYLISTICS %%%
+
+% Margins
+% \setitemize[1]{leftmargin=2em}
+% \setenumerate[1]{leftmargin=*}
+
+% Likewise that they are too spaced out.
+% \setitemize[1]{itemsep=-0.2em}
+% \setenumerate[1]{itemsep=-0.2em}
