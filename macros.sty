@@ -127,6 +127,9 @@
 \newcommand*{\modC}[1]{\category{Mod}_{#1}}
 \newcommand*{\vecC}[1]{\category{Vec}_{#1}}
 \newcommand*{\linRelC}[1]{\category{LinRel}_{#1}}
+\newcommand*{\decGraphC}[1]{\category{Grph}_{#1}}
+\newcommand*{\graphC}[1]{\category{Grph}}
+\newcommand*{\measC}{\category{Meas}}
 
 % Distributions
 \DeclareMathOperator{\normalDist}{N}
@@ -151,10 +154,12 @@
 
 % Category Theory
 \DeclareMathOperator{\cospan}{Csp}
-\newcommand*{\decCospan}[1]{_{#1}\Csp}
+\newcommand*{\strucCospan}[1]{{_{#1}\cospan}}
 \DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\Mor}{Mor}
 \DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\ob}{ob}
+\newcommand*{\tensor}{\otimes}
 
 % Undirected Categories
 \newcommand*{\bind}[3]{\mathbin{\begin{smallmatrix} #3 \\ #1 \equiv #2 \end{smallmatrix}}}

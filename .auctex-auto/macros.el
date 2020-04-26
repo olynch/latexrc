@@ -23,7 +23,9 @@
     '("Abs" 1)
     '("norm" 1)
     '("bind" 3)
-    '("decCospan" 1)
+    '("strucCospan" 1)
+    '("graphC" 1)
+    '("decGraphC" 1)
     '("linRelC" 1)
     '("vecC" 1)
     '("modC" 1)
@@ -79,8 +81,27 @@
     "grpC"
     "abC"
     "catC"
+    "measC"
+    "normalDist"
+    "gammaDist"
+    "im"
+    "coim"
+    "coker"
+    "argmin"
+    "argmax"
+    "GL"
+    "SL"
+    "SU"
+    "SO"
+    "cospan"
+    "Hom"
+    "Mor"
+    "End"
+    "ob"
+    "tensor"
     "Prob"
     "E"
+    "Exp"
     "by"
     "inv")
    (LaTeX-add-amsthm-newtheorems
