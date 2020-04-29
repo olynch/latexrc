@@ -14,6 +14,7 @@
 
 % Graphics
 \usepackage{graphicx}
+\usepackage{float}
 \usepackage{tikz}
 \usepackage{tikz-cd}
 \usepackage{subcaption}
@@ -48,8 +49,10 @@
 \renewcommand*{\to}[1][]{\xrightarrow{#1}}
 \newcommand*{\ot}[1][]{\xleftarrow{#1}}
 \newcommand*{\oto}{\leftrightarrow}
-
 \newcommand*{\tto}{\Rightarrow}
+
+% Functions
+\newcommand*{\maps}{\colon}
 
 % Duals
 \newcommand*{\op}{^{\mathord{\text{\rm op}}}}
@@ -132,6 +135,8 @@
 \newcommand*{\decGraphC}[1]{\category{Grph}_{#1}}
 \newcommand*{\graphC}[1]{\category{Grph}}
 \newcommand*{\measC}{\category{Meas}}
+\newcommand*{\petriC}{\category{Petri}}
+
 
 % Distributions
 \DeclareMathOperator{\normalDist}{N}
