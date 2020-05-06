@@ -7,14 +7,17 @@
 \usepackage{amsthm}
 \usepackage{amsmath}
 \usepackage{amsfonts}
+\usepackage{mathrsfs}
 
 % Localization
 \usepackage[american]{babel}
 
 % Graphics
 \usepackage{graphicx}
+\usepackage{float}
 \usepackage{tikz}
 \usepackage{tikz-cd}
+\usepackage{subcaption}
 \usetikzlibrary{matrix,arrows,decorations.markings,shapes,snakes,automata,backgrounds,petri}
 
 % Fine Tuning
@@ -46,8 +49,10 @@
 \renewcommand*{\to}[1][]{\xrightarrow{#1}}
 \newcommand*{\ot}[1][]{\xleftarrow{#1}}
 \newcommand*{\oto}{\leftrightarrow}
-
 \newcommand*{\tto}{\Rightarrow}
+
+% Functions
+\newcommand*{\maps}{\colon}
 
 % Duals
 \newcommand*{\op}{^{\mathord{\text{\rm op}}}}
@@ -128,6 +133,11 @@
 \newcommand*{\modC}[1]{\category{Mod}_{#1}}
 \newcommand*{\vecC}[1]{\category{Vec}_{#1}}
 \newcommand*{\linRelC}[1]{\category{LinRel}_{#1}}
+\newcommand*{\decGraphC}[1]{\category{Grph}_{#1}}
+\newcommand*{\graphC}[1]{\category{Grph}}
+\newcommand*{\measC}{\category{Meas}}
+\newcommand*{\petriC}{\category{Petri}}
+
 
 % Distributions
 \DeclareMathOperator{\normalDist}{N}
@@ -152,10 +162,12 @@
 
 % Category Theory
 \DeclareMathOperator{\cospan}{Csp}
-\newcommand*{\decCospan}[1]{_{#1}\Csp}
+\newcommand*{\strucCospan}[1]{{_{#1}\cospan}}
 \DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\Mor}{Mor}
 \DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\ob}{ob}
+\newcommand*{\tensor}{\otimes}
 
 % Algebra
 \DeclareMathOperator{\Spec}{Spec}
