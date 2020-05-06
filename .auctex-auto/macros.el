@@ -23,6 +23,7 @@
     '("Abs" 1)
     '("norm" 1)
     '("bind" 3)
+    '("ideal" 1)
     '("decCospan" 1)
     '("linRelC" 1)
     '("vecC" 1)
@@ -68,6 +69,7 @@
     "BigRangle"
     "BigRRangle"
     "ins"
+    "sni"
     "complex"
     "rational"
     "integer"
@@ -79,8 +81,25 @@
     "grpC"
     "abC"
     "catC"
+    "normalDist"
+    "gammaDist"
+    "im"
+    "coim"
+    "coker"
+    "argmin"
+    "argmax"
+    "GL"
+    "SL"
+    "SU"
+    "SO"
+    "cospan"
+    "Hom"
+    "Mor"
+    "End"
+    "Spec"
     "Prob"
     "E"
+    "Exp"
     "by"
     "inv")
    (LaTeX-add-amsthm-newtheorems
