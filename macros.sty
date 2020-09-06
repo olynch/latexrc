@@ -2,6 +2,10 @@
 
 %%% PACKAGES %%%
 
+% Typography
+\usepackage{enumerate}
+\usepackage{siunitx}
+
 % Standard AMS Packages
 \usepackage{amssymb}
 \usepackage{amsthm}
@@ -37,6 +41,10 @@
 
 \renewcommand*{\mathbb}[1]{\mathbbm{#1}}
 
+%%% TYPOGRAPHICAL SHORTHANDS %%%
+
+\newcommand*{\mc}[1]{\mathcal{#1}}
+
 %%% NOTATIONS %%%
 
 % Symbols
@@ -70,6 +78,8 @@
 
 % Set Theory
 \newcommand*{\set}[1]{\{#1\}}
+\newcommand*{\st}{\mid}
+\newcommand*{\sm}{\setminus}
 
 % References
 \newcommand{\eref}[1]{(\ref{#1})}
@@ -207,6 +217,12 @@
 
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}
+\newtheorem{exerciseinner}{Exercise}
+\newenvironment{exercise}[1]{%
+  \renewcommand\theexerciseinner{#1}%
+  \exerciseinner
+}{\endexerciseinner}
+
 
 \theoremstyle{remark}
 \newtheorem*{remark}{Remark}
