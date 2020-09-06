@@ -222,3 +222,17 @@
 % Likewise that they are too spaced out.
 % \setitemize[1]{itemsep=-0.2em}
 % \setenumerate[1]{itemsep=-0.2em}
+
+%%% FRUIT %%%
+
+\directlua{
+  fruits = ['apple','banana','grapes','orange','lemon','strawberries']
+  function randfruit()
+    fruits[math.random(#fruits)]
+  end
+  function includerandfruit()
+    texio.write('\\includegraphics[1em]{latexrc/' .. randfruit() .. '.pdf}')
+  end
+}
+
+\renewcommand{\qedsymbol}{\directlua{includerandfruit()}}
