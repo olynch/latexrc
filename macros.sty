@@ -241,14 +241,7 @@
 
 %%% FRUIT %%%
 
-\directlua{
-  fruits = ['apple','banana','grapes','orange','lemon','strawberries']
-  function randfruit()
-    fruits[math.random(#fruits)]
-  end
-  function includerandfruit()
-    texio.write('\\includegraphics[1em]{latexrc/' .. randfruit() .. '.pdf}')
-  end
-}
-
-\renewcommand{\qedsymbol}{\directlua{includerandfruit()}}
+\renewcommand{\qedsymbol}{\includegraphics[height=1em]{\directlua{
+  fruits = {'apple','banana','grapes','orange','lemon','strawberries'}
+  tex.print('latexrc/fruit/' .. fruits[math.random(table.getn(fruits))] .. '.pdf')
+    }}}
