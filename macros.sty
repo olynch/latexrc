@@ -36,6 +36,9 @@
 % Chemical Formulae
 \usepackage{chemformula}
 
+% Physics (and calculus)
+\usepackage{physics}
+
 % Bibliography
 \usepackage[backend=biber,style=alphabetic]{biblatex}
 
@@ -79,8 +82,7 @@
 \newcommand*{\vect}[1]{\bm{#1}}
 
 % Calculus
-\renewcommand*{\d}{\mathrm{d}}
-\newcommand*{\pd}[1]{\mathop{\frac{\partial}{\partial #1}}}
+% use the physics macro package
 
 % Set Theory
 \newcommand*{\set}[1]{\{#1\}}
@@ -100,28 +102,7 @@
 \newcommand{\Xref}[1]{Example~\ref{#1}}
 
 % Bra-ket notation
-\newcommand*{\LLangle}{\langle\kern-2\nulldelimiterspace\langle}
-\newcommand*{\bigLangle}{\big\langle}
-\newcommand*{\bigLLangle}{\bigLangle\kern-2.5\nulldelimiterspace\bigLangle}
-\newcommand*{\BigLangle}{\Big\langle}
-\newcommand*{\BigLLangle}{\BigLangle\kern-3\nulldelimiterspace\BigLangle}
-
-\newcommand*{\RRangle}{\rangle\kern-2\nulldelimiterspace\rangle}
-\newcommand*{\bigRangle}{\big\rangle}
-\newcommand*{\bigRRangle}{\bigRangle\kern-2.5\nulldelimiterspace\bigRangle}
-\newcommand*{\BigRangle}{\Big\rangle}
-\newcommand*{\BigRRangle}{\BigRangle\kern-3\nulldelimiterspace\BigRangle}
-
-\newcommand*{\braA}[1]{{\langle #1 |}}
-\newcommand*{\ketA}[1]{{| #1 \rangle}}
-\newcommand*{\braketA}[2]{\langle #1 | #2 \rangle}
-
-\newcommand*{\braB}[1]{\LLangle #1 |}
-\newcommand*{\ketB}[1]{| #1 \RRangle}
-\newcommand*{\braketB}[2]{\LLangle #1 | #2 \RRangle}
-
-\newcommand*{\braketBA}[2]{\LLangle #1 | #2 \rangle}
-\newcommand*{\braketAB}[2]{\langle #1 | #2 \RRangle}
+% use the physics macro package
 
 % Relations
 
@@ -228,17 +209,13 @@
 \renewcommand*{\L}{\mc{L}}
 
 % Exponential
-\renewcommand*{\exp}[1]{\e^{#1}}
-\DeclareMathOperator{\Exp}{exp}
+% use physics package
 
 % Surrounding
-\newcommand*{\norm}[1]{\left\lVert#1\right\rVert}
-\newcommand*{\Abs}[1]{\left\lVert#1\right\rVert}
-\newcommand*{\abs}[1]{\left\lvert#1\right\rvert}
-\newcommand*{\avg}[1]{\left\langle#1\right\rangle}
+% mostly use physics package
+\newcommand*{\ip}[1]{\left\langle#1\right\rangle} % Inner product
 \newcommand*{\floor}[1]{\left\lfloor{#1}\right\rfloor}
 \newcommand*{\ceil}[1]{\left\lceil{#1}\right\rceil}
-\newcommand{\p}[1]{\left(#1\right)}
 
 % Set operations
 \newcommand*{\by}{\mathbin{\times}}
@@ -273,16 +250,6 @@
 \newtheorem*{remark}{Remark}
 \newtheorem{example}{Example}
 \newtheorem{lexample}[example]{Example}
-
-
-
-% Margins
-% \setitemize[1]{leftmargin=2em}
-% \setenumerate[1]{leftmargin=*}
-
-% Likewise that they are too spaced out.
-% \setitemize[1]{itemsep=-0.2em}
-% \setenumerate[1]{itemsep=-0.2em}
 
 %%% FRUIT %%%
 
