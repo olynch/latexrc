@@ -13,6 +13,9 @@
 \usepackage{amsfonts}
 \usepackage{mathrsfs}
 
+% Moar Symols
+\usepackage{stmaryrd}
+
 % Localization
 \usepackage[american]{babel}
 
@@ -25,7 +28,7 @@
 \usetikzlibrary{matrix,arrows,decorations.markings,shapes,snakes,automata,backgrounds,petri}
 
 % Fine Tuning
-\usepackage{microtype}
+% \usepackage{microtype}
 
 % Extra Fonts
 \usepackage{bbm}
@@ -58,12 +61,13 @@
 \newcommand*{\ot}[1][]{\xleftarrow{#1}}
 \newcommand*{\oto}{\leftrightarrow}
 \newcommand*{\tto}{\Rightarrow}
+\newcommand*{\mto}{\mapsto}
 
 % Functions
 \newcommand*{\maps}{\colon}
 
 % Duals
-\newcommand*{\op}{^{\mathord{\text{\rm op}}}}
+\newcommand*{\op}{^{\mathord{\text{op}}}}
 
 % Exponential and Imaginary
 \newcommand*{\e}{\mathrm{e}}
@@ -134,6 +138,7 @@
 
 % Categories
 \newcommand*{\category}[1]{\mathsf{#1}}
+\newcommand*{\cat}[1]{\category{#1}}
 \newcommand*{\setC}{\category{Set}}
 \newcommand*{\finSetC}{\category{FinSet}}
 \newcommand*{\sSetC}{\category{sSet}}
@@ -147,6 +152,8 @@
 \newcommand*{\graphC}[1]{\category{Grph}}
 \newcommand*{\measC}{\category{Meas}}
 \newcommand*{\petriC}{\category{Petri}}
+\newcommand*{\finIntC}{\cat{FinInt}}
+\newcommand*{\intC}{\cat{Int}}
 
 
 % Distributions
@@ -178,6 +185,18 @@
 \DeclareMathOperator{\End}{End}
 \DeclareMathOperator{\ob}{ob}
 \newcommand*{\tensor}{\otimes}
+\DeclareMathOperator{\ev}{ev}
+\newcommand*{\cmp}{\mathbin{\fatsemi}}
+\newcommand*{\limas}{\lim}
+\renewcommand*{\lim}{\varprojlim}
+\newcommand*{\colim}{\varinjlim}
+\DeclareMathOperator{\tuc}{tuc}
+\DeclareMathOperator{\cut}{cut}
+\DeclareMathOperator{\bin}{bin}
+\DeclareMathOperator{\Prof}{Prof}
+\DeclareMathOperator{\Ran}{Ran}
+\DeclareMathOperator{\Lan}{Lan}
+\newcommand{\twisted}[1]{\textsc{tw}(#1)}
 
 % Algebra
 \DeclareMathOperator{\Spec}{Spec}
@@ -199,12 +218,20 @@
 \newcommand*{\Abs}[1]{\left\lVert#1\right\rVert}
 \newcommand*{\abs}[1]{\left\lvert#1\right\rvert}
 \newcommand*{\avg}[1]{\left\langle#1\right\rangle}
+\newcommand*{\floor}[1]{\left\lfloor{#1}\right\rfloor}
+\newcommand*{\ceil}[1]{\left\lceil{#1}\right\rceil}
+\newcommand{\p}[1]{\left(#1\right)}
 
 % Set operations
 \newcommand*{\by}{\mathbin{\times}}
 
 % Inverse
 \newcommand*{\inv}{^{-1}}
+
+% Topology
+\DeclareMathOperator{\sk}{sk}
+\DeclareMathOperator{\bd}{\partial}
+\newcommand*{\nrv}{N}
 
 %%% THEOREMS %%%
 
@@ -229,7 +256,7 @@
 \newtheorem{example}{Example}
 \newtheorem{lexample}[example]{Example}
 
-%%% STYLISTICS %%%
+
 
 % Margins
 % \setitemize[1]{leftmargin=2em}
