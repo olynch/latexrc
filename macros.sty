@@ -28,7 +28,7 @@
 \usetikzlibrary{matrix,arrows,decorations.markings,shapes,snakes,automata,backgrounds,petri}
 
 % Fine Tuning
-\usepackage{microtype}
+% \usepackage{microtype}
 
 % Extra Fonts
 \usepackage{bbold}
@@ -63,6 +63,7 @@
 \newcommand*{\ot}[1][]{\xleftarrow{#1}}
 \newcommand*{\oto}{\leftrightarrow}
 \newcommand*{\tto}{\Rightarrow}
+\newcommand*{\mto}{\mapsto}
 
 % Functions
 \newcommand*{\maps}{\colon}
@@ -85,6 +86,7 @@
 \newcommand*{\set}[1]{\{#1\}}
 \newcommand*{\st}{\mid}
 \newcommand*{\sm}{\setminus}
+\newcommand*{\powerset}{\mc{P}}
 
 % References
 \newcommand{\eref}[1]{(\ref{#1})}
@@ -153,6 +155,8 @@
 \newcommand*{\graphC}[1]{\category{Grph}}
 \newcommand*{\measC}{\category{Meas}}
 \newcommand*{\petriC}{\category{Petri}}
+\newcommand*{\finIntC}{\cat{FinInt}}
+\newcommand*{\intC}{\cat{Int}}
 \newcommand*{\attrSetC}{\mathrm{Attr}\text{-}\setC}
 \newcommand*{\C}{\category{C}}
 
@@ -191,6 +195,13 @@
 \newcommand*{\limas}{\lim}
 \renewcommand*{\lim}{\varprojlim}
 \newcommand*{\colim}{\varinjlim}
+\DeclareMathOperator{\tuc}{tuc}
+\DeclareMathOperator{\cut}{cut}
+\DeclareMathOperator{\bin}{bin}
+\DeclareMathOperator{\Prof}{Prof}
+\DeclareMathOperator{\Ran}{Ran}
+\DeclareMathOperator{\Lan}{Lan}
+\newcommand{\twisted}[1]{\textsc{tw}(#1)}
 
 % Profunctors
 
@@ -214,6 +225,7 @@
 % Probability
 \newcommand*{\Prob}{\mathop{\mathbb{P}}}
 \newcommand*{\E}{\mathop{\mathrm{E}}}
+\renewcommand*{\L}{\mc{L}}
 
 % Exponential
 \renewcommand*{\exp}[1]{\e^{#1}}
@@ -224,12 +236,20 @@
 \newcommand*{\Abs}[1]{\left\lVert#1\right\rVert}
 \newcommand*{\abs}[1]{\left\lvert#1\right\rvert}
 \newcommand*{\avg}[1]{\left\langle#1\right\rangle}
+\newcommand*{\floor}[1]{\left\lfloor{#1}\right\rfloor}
+\newcommand*{\ceil}[1]{\left\lceil{#1}\right\rceil}
+\newcommand{\p}[1]{\left(#1\right)}
 
 % Set operations
 \newcommand*{\by}{\mathbin{\times}}
 
 % Inverse
 \newcommand*{\inv}{^{-1}}
+
+% Topology
+\DeclareMathOperator{\sk}{sk}
+\DeclareMathOperator{\bd}{\partial}
+\newcommand*{\nrv}{N}
 
 %%% THEOREMS %%%
 
