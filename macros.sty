@@ -25,7 +25,7 @@
 \usepackage{tikz}
 \usepackage{tikz-cd}
 \usepackage{subcaption}
-\usetikzlibrary{matrix,arrows,decorations.markings,shapes,snakes,automata,backgrounds,petri}
+\usetikzlibrary{matrix,arrows,decorations.markings,shapes,automata,backgrounds,petri}
 
 % Fine Tuning
 % \usepackage{microtype}
@@ -41,6 +41,7 @@
 
 % Bibliography
 \usepackage[backend=biber,style=alphabetic]{biblatex}
+\usepackage{csquotes}
 
 % LuaTeX
 % \usepackage{luatexbase}
@@ -72,7 +73,7 @@
 \newcommand*{\maps}{\colon}
 
 % Duals
-\newcommand*{\op}{^{\mathord{\text{op}}}}
+\renewcommand*{\op}{^{\mathord{\text{op}}}}
 
 % Exponential and Imaginary
 \newcommand*{\e}{\mathrm{e}}
@@ -118,7 +119,7 @@
 \renewcommand*{\natural}{\numberset{N}}
 \newcommand*{\integer}{\numberset{Z}}
 \newcommand*{\ffield}{\numberset{F}}
-\newcommand*{\real}{\numberset{R}}
+\renewcommand*{\real}{\numberset{R}}
 
 % Categories
 \newcommand*{\category}[1]{\mathsf{#1}}
@@ -171,7 +172,7 @@
 \DeclareMathOperator{\End}{End}
 \DeclareMathOperator{\ob}{ob}
 \newcommand*{\tensor}{\otimes}
-\DeclareMathOperator{\ev}{ev}
+\renewcommand{\ev}{\mathop{\mathrm{ev}}}
 \newcommand*{\cmp}{\mathbin{\fatsemi}}
 \newcommand*{\limas}{\lim}
 \renewcommand*{\lim}{\varprojlim}
@@ -213,7 +214,7 @@
 
 % Surrounding
 % mostly use physics package
-\newcommand*{\ip}[1]{\left\langle#1\right\rangle} % Inner product
+\renewcommand*{\ip}[1]{\left\langle#1\right\rangle} % Inner product
 \newcommand*{\floor}[1]{\left\lfloor{#1}\right\rfloor}
 \newcommand*{\ceil}[1]{\left\lceil{#1}\right\rceil}
 
